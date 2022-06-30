@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksshir-27fc"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksshir-27fc"
+  template:
+    metadata:
+      labels:
+        app: "aksshir-27fc"
+    spec:
+      containers:
+        - name: "aksshir-27fc"
+          image: "crshir.azurecr.io/aksshir"
+          ports:
+          - containerPort: 80
